@@ -6,7 +6,7 @@ const getRepos = async (url) =>{
         
         let holder = ``;
         data.forEach(e => {
-            if(e.name === "USERNAME"){return}
+            if(e.name === "USERNAME"){return} //(Change to your github username) Stops it from pulling your personal github readme
             holder +=(`<li><a href="${e.html_url}" target="_blank"><span class="bold">${e.name.replace(/-/g, ' ')}</span>: ${e.description}</a></li>`)
         });
         repoContainer.innerHTML = holder //insert the looped holder var data into the container
